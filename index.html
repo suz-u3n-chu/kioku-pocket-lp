@@ -61,6 +61,21 @@
             font-family: "Nunito", "Zen Maru Gothic", sans-serif;
         }
 
+        .copy-heading {
+            text-wrap: balance;
+            line-break: strict;
+        }
+
+        .copy-body {
+            text-wrap: pretty;
+            line-break: strict;
+        }
+
+        .keep-together {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
         /* Blobアニメーション（Abode風） */
         @keyframes float {
             0% { transform: translateY(0px) rotate(0deg) scale(1); }
@@ -218,21 +233,22 @@
             </div>
 
             <!-- メインコピー -->
-            <h1 class="text-4xl md:text-7xl font-heading font-black tracking-tighter text-dark-navy leading-[1.15] mb-6 reveal delay-100">
-                LINEの会話を、<br class="md:hidden">
+            <h1 class="copy-heading text-4xl md:text-7xl font-heading font-black tracking-tighter text-dark-navy leading-[1.15] mb-6 reveal delay-100">
+                <span class="block">LINEの会話を、</span>
                 <span class="text-bright-blue relative inline-block">
                     “状況”として整理
                     <!-- 下線装飾 -->
                     <svg class="absolute w-full h-3 -bottom-1 left-0 text-hot-pink opacity-30" viewBox="0 0 100 10" preserveAspectRatio="none">
                         <path d="M0 5 Q 50 15 100 5" stroke="currentColor" stroke-width="4" fill="transparent"/>
                     </svg>
-                </span>する。
+                </span><span class="keep-together">する。</span>
             </h1>
 
             <!-- サブコピー -->
-            <p class="text-md md:text-xl text-text-gray max-w-3xl mx-auto mb-12 font-medium leading-relaxed reveal delay-200">
-                複数のLINEから、AIが重要事項を自動集約。<br class="hidden md:block">
-                もう未読をすべて追う必要はありません。「今日あなたが判断すべきこと」が、毎朝ひと目で分かります。
+            <p class="copy-body text-md md:text-xl text-text-gray max-w-3xl mx-auto mb-12 font-medium leading-relaxed reveal delay-200">
+                複数のLINEから、AIが重要事項を自動集約。<br>
+                もう未読をすべて追う必要はありません。<br class="sm:hidden">
+                「今日あなたが判断すべきこと」が、<span class="keep-together">毎朝ひと目で分かります。</span>
             </p>
 
             <!-- アクションボタン -->
@@ -277,11 +293,12 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16 reveal">
                 <div class="inline-block bg-pale-pink text-hot-pink font-black px-4 py-1.5 rounded-pill mb-4 tracking-wider text-sm uppercase">Problem</div>
-                <h2 class="text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
+                <h2 class="copy-heading text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
                     読むだけで、時間が消えていく。
                 </h2>
-                <p class="text-text-gray text-lg max-w-3xl mx-auto leading-relaxed">
-                    1日何百通ものLINE。読むだけで1日が消えていく。複数のグループに散らばる情報、重なるメッセージ。<br class="hidden md:block">
+                <p class="copy-body text-text-gray text-lg max-w-3xl mx-auto leading-relaxed">
+                    1日何百通ものLINE。読むだけで時間が消えていく。<br class="hidden md:block">
+                    複数のグループに散らばる情報、重なるメッセージ。<br class="hidden md:block">
                     読む量が多いほど、本当に大事な用件は会話に埋もれていきます。
                 </p>
             </div>
@@ -289,8 +306,9 @@
             <!-- 課題視覚化エリア -->
             <div class="bg-bg-main border-2 border-border-light rounded-card p-8 md:p-12 mb-16 reveal">
                 <div class="max-w-4xl mx-auto">
-                    <h3 class="text-xl md:text-2xl font-black text-dark-navy text-center mb-10">
-                        「5案件 × 3グループ × 18通 ＝ <span class="text-hot-pink font-extrabold text-2xl md:text-3xl">毎日 270通</span>」の過酷な現実
+                    <h3 class="copy-heading text-xl md:text-2xl font-black text-dark-navy text-center mb-10">
+                        「5案件 × 3グループ × 18通」<br class="sm:hidden">
+                        ＝ <span class="text-hot-pink font-extrabold text-2xl md:text-3xl">毎日 270通</span> の過酷な現実
                     </h3>
                     
                     <div class="space-y-8">
@@ -381,11 +399,12 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16 reveal">
                 <div class="inline-block bg-pale-blue text-bright-blue font-black px-4 py-1.5 rounded-pill mb-4 tracking-wider text-sm uppercase">Concept</div>
-                <h2 class="text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
-                    AI要約は便利。でも、“案件”は見ていない。
+                <h2 class="copy-heading text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
+                    AI要約は便利。<br class="sm:hidden">でも、“案件”は見ていない。
                 </h2>
-                <p class="text-text-gray text-lg max-w-2xl mx-auto">
-                    従来のAIは単に会話を要約するだけ。人間が本当に見たいのは、各案件の「今の状況」です。
+                <p class="copy-body text-text-gray text-lg max-w-2xl mx-auto">
+                    従来のAIは単に会話を要約するだけ。<br class="hidden md:block">
+                    人間が本当に見たいのは、各案件の「今の状況」です。
                 </p>
             </div>
 
@@ -467,11 +486,13 @@
             
             <div class="text-center mb-20 reveal">
                 <div class="inline-block bg-pale-blue text-bright-blue font-black px-4 py-1.5 rounded-pill mb-4 tracking-wider text-sm uppercase">Features</div>
-                <h2 class="text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
-                    これこそ、欲しかった秘書機能。<br class="md:hidden">3つの圧倒的価値。
+                <h2 class="copy-heading text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
+                    これこそ、欲しかった秘書機能。<br>
+                    3つの圧倒的価値。
                 </h2>
-                <p class="text-text-gray text-lg max-w-2xl mx-auto">
-                    単なる自動要約ツールとは全く異なります。きおくポケットは「判断」をスムーズにし、「利益」に直結させます。
+                <p class="copy-body text-text-gray text-lg max-w-2xl mx-auto">
+                    単なる自動要約ツールとは全く異なります。<br class="hidden md:block">
+                    きおくポケットは「判断」をスムーズにし、「利益」に直結させます。
                 </p>
             </div>
 
@@ -479,11 +500,11 @@
             <div class="flex flex-col lg:flex-row items-center gap-12 mb-32 reveal">
                 <div class="lg:w-1/2">
                     <div class="text-bright-blue font-black text-lg mb-2 tracking-wider">FEATURE 01</div>
-                    <h3 class="text-3xl font-heading font-black text-dark-navy mb-4">
+                    <h3 class="copy-heading text-3xl font-heading font-black text-dark-navy mb-4">
                         複数LINEを案件単位で統合<br>
                         『きおくポケット 整理エンジン』
                     </h3>
-                    <p class="text-text-gray leading-relaxed mb-6 text-sm md:text-base">
+                    <p class="copy-body text-text-gray leading-relaxed mb-6 text-sm md:text-base">
                         社内LINE、外注LINE、クライアントLINEなど、散らばった複数のチャットグループから特定の「案件」に関わる発言を自動抽出し、一つの記憶として整理・統合します。
                     </p>
                     
@@ -540,12 +561,13 @@
             <div class="flex flex-col lg:flex-row-reverse items-center gap-12 mb-32 reveal">
                 <div class="lg:w-1/2">
                     <div class="text-hot-pink font-black text-lg mb-2 tracking-wider">FEATURE 02</div>
-                    <h3 class="text-3xl font-heading font-black text-dark-navy mb-4">
+                    <h3 class="copy-heading text-3xl font-heading font-black text-dark-navy mb-4">
                         未読をすべて追いかける前に<br>
                         『毎朝届く、朝刊ブリーフィング』
                     </h3>
-                    <p class="text-text-gray leading-relaxed mb-6 text-sm md:text-base">
-                        昨日からの変化や、直近で必要な判断だけを毎朝8時、あなたのLINEへコンパクトに要約配信。膨大なトーク履歴をスクロールする時間をなくします。
+                    <p class="copy-body text-text-gray leading-relaxed mb-6 text-sm md:text-base">
+                        昨日からの変化や、直近で必要な判断だけを毎朝8時に配信。<br class="hidden md:block">
+                        膨大なトーク履歴をスクロールする時間をなくします。
                     </p>
                     
                     <div class="space-y-3 bg-white p-6 rounded-card border-2 border-border-light">
@@ -597,12 +619,13 @@
             <div class="flex flex-col lg:flex-row items-center gap-12 reveal">
                 <div class="lg:w-1/2">
                     <div class="text-accent-green font-black text-lg mb-2 tracking-wider">FEATURE 03</div>
-                    <h3 class="text-3xl font-heading font-black text-dark-navy mb-4">
+                    <h3 class="copy-heading text-3xl font-heading font-black text-dark-navy mb-4">
                         過去ログに眠るチャンスを救う<br>
                         『商談フォロー案内』
                     </h3>
-                    <p class="text-text-gray leading-relaxed mb-6 text-sm md:text-base">
-                        「来月、追加LPの相談をするかもしれません」「新しい採用導線を試そうと思っていて」など、過去チャットに含まれる“将来のビジネスチャンス”をAIが検知。フォローすべきタイミングで優しくご案内します。
+                    <p class="copy-body text-text-gray leading-relaxed mb-6 text-sm md:text-base">
+                        「来月、追加LPの相談をするかもしれません」など、<br class="hidden md:block">
+                        過去チャットに含まれる“将来のビジネスチャンス”をAIが検知。フォローすべきタイミングで優しくご案内します。
                     </p>
                     
                     <div class="space-y-3 bg-white p-6 rounded-card border-2 border-border-light">
@@ -658,11 +681,11 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16 reveal">
                 <div class="inline-block bg-white text-hot-pink font-black px-4 py-1.5 rounded-pill shadow-sm mb-4 tracking-wider text-sm uppercase">Benefits</div>
-                <h2 class="text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-6 leading-tight">
+                <h2 class="copy-heading text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-6 leading-tight">
                     読むだけの時間をゼロにし、<br class="md:hidden">
                     営業活動と商談獲得の時間を最大化する。
                 </h2>
-                <p class="text-text-gray text-base md:text-lg max-w-3xl mx-auto font-medium">
+                <p class="copy-body text-text-gray text-base md:text-lg max-w-3xl mx-auto font-medium">
                     きおくポケットは、単なる時間削減ツールではありません。<br class="hidden md:block">
                     創出した時間で本来の業務に集中し、埋もれていた商談のサインを新たな利益へと変換します。
                 </p>
@@ -706,11 +729,13 @@
             
             <div class="text-center mb-16 reveal">
                 <div class="inline-block bg-pale-blue text-bright-blue font-black px-4 py-1.5 rounded-pill mb-4 tracking-wider text-sm uppercase">Comparison</div>
-                <h2 class="text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
-                    なぜ「きおくポケット」なのか？ 他AIやツールとの圧倒的違い。
+                <h2 class="copy-heading text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
+                    なぜ「きおくポケット」なのか？<br>
+                    他AIやツールとの圧倒的違い。
                 </h2>
-                <p class="text-text-gray text-lg max-w-2xl mx-auto">
-                    焦点を絞っているから、深い。私たちは大規模CRMや広告マーケ領域はやりません。LINE業務の本質に集中しています。
+                <p class="copy-body text-text-gray text-lg max-w-2xl mx-auto">
+                    焦点を絞っているから、深い。<br class="hidden md:block">
+                    私たちは大規模CRMや広告マーケ領域はやりません。LINE業務の本質に集中しています。
                 </p>
             </div>
 
@@ -824,11 +849,12 @@
             
             <div class="text-center mb-16 reveal">
                 <div class="inline-block bg-pale-green text-accent-green font-black px-4 py-1.5 rounded-pill mb-4 tracking-wider text-sm uppercase">How it works</div>
-                <h2 class="text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
+                <h2 class="copy-heading text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
                     15分で導入完了。
                 </h2>
-                <p class="text-text-gray text-lg max-w-2xl mx-auto">
-                    LINEグループにボットを招待するだけ。難しい社内教育や設定は一切不要です。
+                <p class="copy-body text-text-gray text-lg max-w-2xl mx-auto">
+                    LINEグループにボットを招待するだけ。<br class="hidden md:block">
+                    難しい社内教育や設定は一切不要です。
                 </p>
             </div>
 
@@ -889,12 +915,13 @@
         </div>
 
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
-            <h2 class="text-4xl md:text-6xl font-heading font-black tracking-tighter text-dark-navy mb-6 leading-tight">
-                未読を追うだけの1日から、<br class="md:hidden">
+            <h2 class="copy-heading text-4xl md:text-6xl font-heading font-black tracking-tighter text-dark-navy mb-6 leading-tight">
+                未読を追うだけの1日から、<br>
                 <span class="text-bright-blue">未来を動かす1日へ。</span>
             </h2>
-            <p class="text-xl text-text-gray mb-10 font-bold">
-                まずは1つのLINEグループから、新しい仕事の記憶箱を。<br class="md:hidden">初月無料。
+            <p class="copy-body text-xl text-text-gray mb-10 font-bold">
+                まずは1つのLINEグループから、新しい仕事の記憶箱を。<br>
+                初月無料。
             </p>
             <a href="#" class="inline-block bg-dark-navy text-white px-10 py-5 rounded-pill font-bold text-xl hover:bg-bright-blue hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                 無料トライアルを始める
