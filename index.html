@@ -76,6 +76,23 @@
             white-space: nowrap;
         }
 
+        @media (max-width: 480px) {
+            h2.copy-heading {
+                font-size: 1.75rem;
+                line-height: 1.25;
+            }
+
+            h3.copy-heading {
+                font-size: 1.55rem;
+                line-height: 1.3;
+            }
+
+            #cta h2.copy-heading {
+                font-size: 1.6rem;
+                line-height: 1.25;
+            }
+        }
+
         /* Blobアニメーション（Abode風） */
         @keyframes float {
             0% { transform: translateY(0px) rotate(0deg) scale(1); }
@@ -219,7 +236,7 @@
     </header>
 
     <!-- ヒーローセクション -->
-    <section class="relative pt-36 pb-24 overflow-hidden bg-gradient-to-b from-bg-main via-bg-main to-pale-blue">
+    <section class="relative pt-32 pb-20 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-b from-bg-main via-bg-main to-pale-blue">
         <!-- 浮遊Blob -->
         <div class="blob delay-1 w-36 h-36 md:w-52 md:h-52 bg-pale-pink top-20 -left-12 md:left-12 opacity-80"></div>
         <div class="blob delay-2 w-48 h-48 md:w-72 md:h-72 bg-bright-blue top-32 -right-24 md:right-12 opacity-10"></div>
@@ -233,21 +250,21 @@
             </div>
 
             <!-- メインコピー -->
-            <h1 class="copy-heading text-4xl md:text-7xl font-heading font-black tracking-tighter text-dark-navy leading-[1.15] mb-6 reveal delay-100">
+            <h1 class="copy-heading text-[1.95rem] sm:text-5xl md:text-7xl font-heading font-black tracking-tighter text-dark-navy leading-[1.12] md:leading-[1.15] mb-6 reveal delay-100">
                 <span class="block">LINEの会話を、</span>
                 <span class="text-bright-blue relative inline-block">
-                    “状況”として整理
+                    “状況”として整理する。
                     <!-- 下線装飾 -->
                     <svg class="absolute w-full h-3 -bottom-1 left-0 text-hot-pink opacity-30" viewBox="0 0 100 10" preserveAspectRatio="none">
                         <path d="M0 5 Q 50 15 100 5" stroke="currentColor" stroke-width="4" fill="transparent"/>
                     </svg>
-                </span><span class="keep-together">する。</span>
+                </span>
             </h1>
 
             <!-- サブコピー -->
             <p class="copy-body text-md md:text-xl text-text-gray max-w-3xl mx-auto mb-12 font-medium leading-relaxed reveal delay-200">
                 複数のLINEから、AIが重要事項を自動集約。<br>
-                もう未読をすべて追う必要はありません。<br class="sm:hidden">
+                もう未読をすべて追う必要はありません。<br>
                 「今日あなたが判断すべきこと」が、<span class="keep-together">毎朝ひと目で分かります。</span>
             </p>
 
@@ -262,7 +279,7 @@
             </div>
 
             <!-- 実績・効果指標カード -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-20 reveal delay-400">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-16 md:mt-20 reveal delay-400">
                 <div class="bg-white/90 backdrop-blur border-2 border-border-light rounded-card p-6 shadow-sm hover-card">
                     <div class="text-4xl font-heading font-black text-bright-blue mb-1">
                         <span class="counter" data-target="45">0</span>分/日
@@ -297,9 +314,9 @@
                     読むだけで、時間が消えていく。
                 </h2>
                 <p class="copy-body text-text-gray text-lg max-w-3xl mx-auto leading-relaxed">
-                    1日何百通ものLINE。読むだけで時間が消えていく。<br class="hidden md:block">
+                    1日何百通ものLINE。読むだけで時間が消えていく。<br>
                     複数のグループに散らばる情報、重なるメッセージ。<br class="hidden md:block">
-                    読む量が多いほど、本当に大事な用件は会話に埋もれていきます。
+                    本当に大事な用件は、会話に埋もれていきます。
                 </p>
             </div>
 
@@ -307,8 +324,8 @@
             <div class="bg-bg-main border-2 border-border-light rounded-card p-8 md:p-12 mb-16 reveal">
                 <div class="max-w-4xl mx-auto">
                     <h3 class="copy-heading text-xl md:text-2xl font-black text-dark-navy text-center mb-10">
-                        「5案件 × 3グループ × 18通」<br class="sm:hidden">
-                        ＝ <span class="text-hot-pink font-extrabold text-2xl md:text-3xl">毎日 270通</span> の過酷な現実
+                        5案件 × 3グループ × 18通<br>
+                        ＝ <span class="text-hot-pink font-extrabold text-2xl md:text-3xl">毎日270通</span>の過酷な現実
                     </h3>
                     
                     <div class="space-y-8">
@@ -403,8 +420,8 @@
                     AI要約は便利。<br class="sm:hidden">でも、“案件”は見ていない。
                 </h2>
                 <p class="copy-body text-text-gray text-lg max-w-2xl mx-auto">
-                    従来のAIは単に会話を要約するだけ。<br class="hidden md:block">
-                    人間が本当に見たいのは、各案件の「今の状況」です。
+                    従来のAIは、会話を要約するだけ。<br>
+                    本当に見たいのは、各案件の「今の状況」です。
                 </p>
             </div>
 
@@ -491,8 +508,9 @@
                     3つの圧倒的価値。
                 </h2>
                 <p class="copy-body text-text-gray text-lg max-w-2xl mx-auto">
-                    単なる自動要約ツールとは全く異なります。<br class="hidden md:block">
-                    きおくポケットは「判断」をスムーズにし、「利益」に直結させます。
+                    単なる自動要約ツールとは異なります。<br>
+                    きおくポケットは「判断」をスムーズにし、<br class="hidden sm:block">
+                    「利益」に直結させます。
                 </p>
             </div>
 
@@ -505,7 +523,8 @@
                         『きおくポケット 整理エンジン』
                     </h3>
                     <p class="copy-body text-text-gray leading-relaxed mb-6 text-sm md:text-base">
-                        社内LINE、外注LINE、クライアントLINEなど、散らばった複数のチャットグループから特定の「案件」に関わる発言を自動抽出し、一つの記憶として整理・統合します。
+                        社内LINE、外注LINE、クライアントLINEなど、<br class="hidden md:block">
+                        散らばった会話を案件ごとに整理・統合します。
                     </p>
                     
                     <div class="space-y-3 bg-white p-6 rounded-card border-2 border-border-light">
@@ -566,7 +585,7 @@
                         『毎朝届く、朝刊ブリーフィング』
                     </h3>
                     <p class="copy-body text-text-gray leading-relaxed mb-6 text-sm md:text-base">
-                        昨日からの変化や、直近で必要な判断だけを毎朝8時に配信。<br class="hidden md:block">
+                        昨日からの変化と、今日必要な判断だけを毎朝配信。<br class="hidden md:block">
                         膨大なトーク履歴をスクロールする時間をなくします。
                     </p>
                     
@@ -624,8 +643,8 @@
                         『商談フォロー案内』
                     </h3>
                     <p class="copy-body text-text-gray leading-relaxed mb-6 text-sm md:text-base">
-                        「来月、追加LPの相談をするかもしれません」など、<br class="hidden md:block">
-                        過去チャットに含まれる“将来のビジネスチャンス”をAIが検知。フォローすべきタイミングで優しくご案内します。
+                        過去チャットに含まれる“将来のビジネスチャンス”をAIが検知。<br class="hidden md:block">
+                        フォローすべきタイミングでお知らせします。
                     </p>
                     
                     <div class="space-y-3 bg-white p-6 rounded-card border-2 border-border-light">
@@ -687,7 +706,7 @@
                 </h2>
                 <p class="copy-body text-text-gray text-base md:text-lg max-w-3xl mx-auto font-medium">
                     きおくポケットは、単なる時間削減ツールではありません。<br class="hidden md:block">
-                    創出した時間で本来の業務に集中し、埋もれていた商談のサインを新たな利益へと変換します。
+                    埋もれていた商談のサインを、新たな利益へ変換します。
                 </p>
             </div>
 
@@ -735,7 +754,7 @@
                 </h2>
                 <p class="copy-body text-text-gray text-lg max-w-2xl mx-auto">
                     焦点を絞っているから、深い。<br class="hidden md:block">
-                    私たちは大規模CRMや広告マーケ領域はやりません。LINE業務の本質に集中しています。
+                    LINE業務の本質に集中しています。
                 </p>
             </div>
 
@@ -854,7 +873,7 @@
                 </h2>
                 <p class="copy-body text-text-gray text-lg max-w-2xl mx-auto">
                     LINEグループにボットを招待するだけ。<br class="hidden md:block">
-                    難しい社内教育や設定は一切不要です。
+                    難しい社内教育や設定は不要です。
                 </p>
             </div>
 
@@ -920,8 +939,8 @@
                 <span class="text-bright-blue">未来を動かす1日へ。</span>
             </h2>
             <p class="copy-body text-xl text-text-gray mb-10 font-bold">
-                まずは1つのLINEグループから、新しい仕事の記憶箱を。<br>
-                初月無料。
+                まずは1つのLINEグループから。<br>
+                新しい仕事の記憶箱を、初月無料で。
             </p>
             <a href="#" class="inline-block bg-dark-navy text-white px-10 py-5 rounded-pill font-bold text-xl hover:bg-bright-blue hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
                 無料トライアルを始める
