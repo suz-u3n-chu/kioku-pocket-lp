@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LINE秘書 きおくポケットの無料相談受付フォームです。">
+    <title>無料相談 | LINE秘書 きおくポケット</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-main': '#F2FAFF',
+                        'bg-card': '#FFFFFF',
+                        'pale-blue': '#DDEFFF',
+                        'pale-pink': '#FFF2FC',
+                        'pale-green': '#F0FBF5',
+                        'bright-blue': '#3474FF',
+                        'hot-pink': '#CC009E',
+                        'accent-green': '#00B850',
+                        'accent-yellow': '#FFD666',
+                        'dark-navy': '#0C1937',
+                        'dark-gray': '#1A1A2E',
+                        'text-gray': '#6D6D6D',
+                        'border-light': 'rgba(0,0,0,0.06)',
+                    },
+                    fontFamily: {
+                        'heading': ['Nunito', '"Zen Maru Gothic"', 'sans-serif'],
+                        'body': ['"Zen Maru Gothic"', 'sans-serif']
+                    },
+                    borderRadius: {
+                        'card': '28px',
+                        'pill': '36px',
+                        'icon': '20px'
+                    },
+                    letterSpacing: {
+                        'tighter': '-0.05em',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Zen Maru Gothic", sans-serif;
+            color: #1A1A2E;
+            background-color: #F2FAFF;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .font-heading {
+            font-family: "Nunito", "Zen Maru Gothic", sans-serif;
+        }
+
+        .copy-heading {
+            text-wrap: balance;
+            line-break: strict;
+        }
+
+        .copy-body {
+            text-wrap: pretty;
+            line-break: strict;
+        }
+
+        .no-orphan {
+            white-space: nowrap;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg) scale(1); }
+            50% { transform: translateY(-15px) rotate(4deg) scale(1.03); }
+            100% { transform: translateY(0px) rotate(0deg) scale(1); }
+        }
+
+        @keyframes blobShape {
+            0% { border-radius: 50% 40% 50% 40% / 40% 50% 40% 50%; }
+            50% { border-radius: 43% 47% 41% 49% / 47% 43% 49% 41%; }
+            100% { border-radius: 50% 40% 50% 40% / 40% 50% 40% 50%; }
+        }
+
+        .blob {
+            position: absolute;
+            z-index: 0;
+            pointer-events: none;
+            animation: float 7s ease-in-out infinite, blobShape 9s ease-in-out infinite;
+            filter: drop-shadow(0 12px 24px rgba(0,0,0,0.04));
+        }
+
+        .blob.delay-1 { animation-delay: -2s; }
+        .blob.delay-2 { animation-delay: -4s; }
+
+        @keyframes eyeLook {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(-2px, -1px); }
+            50% { transform: translate(2px, 1px); }
+            75% { transform: translate(0, 2px); }
+        }
+
+        .mini-blob-eye {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            width: 18%;
+            height: 18%;
+            top: 32%;
+        }
+
+        .mini-blob-eye::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background-color: #0C1937;
+            border-radius: 50%;
+            top: 20%;
+            left: 20%;
+            animation: eyeLook 4s ease-in-out infinite;
+        }
+
+        .mini-blob-eye.left { left: 26%; }
+        .mini-blob-eye.right { right: 26%; }
+
+        input, select, textarea {
+            appearance: none;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-bright-blue selection:text-white bg-bg-main">
+    <header class="fixed top-0 left-0 w-full z-50 bg-bg-main/80 backdrop-blur-lg border-b border-border-light">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="./index.html" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-bright-blue rounded-[40%_50%_40%_50%] relative group-hover:rotate-12 transition-transform duration-300 shadow-md shadow-bright-blue/20">
+                    <div class="mini-blob-eye left"></div>
+                    <div class="mini-blob-eye right"></div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-heading font-black text-lg text-dark-navy tracking-tighter leading-none">きおくポケット</span>
+                    <span class="text-[9px] font-bold text-bright-blue tracking-widest mt-0.5">LINE秘書</span>
+                </div>
+            </a>
+
+            <a href="./index.html" class="bg-white text-dark-navy border-2 border-border-light px-5 py-2.5 rounded-pill font-bold hover:border-bright-blue hover:text-bright-blue transition-all text-sm">
+                LPに戻る
+            </a>
+        </div>
+    </header>
+
+    <main class="relative min-h-screen pt-32 pb-20 overflow-hidden bg-gradient-to-b from-bg-main via-[#E9F6FF] to-pale-blue">
+        <div class="blob delay-1 w-40 h-40 md:w-56 md:h-56 bg-pale-pink top-24 -left-16 md:left-8 opacity-90"></div>
+        <div class="blob delay-2 w-52 h-52 md:w-80 md:h-80 bg-bright-blue top-36 -right-24 md:right-8 opacity-10"></div>
+        <div class="blob w-28 h-28 bg-accent-yellow bottom-16 left-1/3 opacity-45"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-[0.86fr_1.14fr] gap-10 items-start">
+                <section class="lg:sticky lg:top-28">
+                    <div class="inline-block bg-pale-green text-accent-green font-black px-4 py-1.5 rounded-pill mb-5 tracking-wider text-sm uppercase">
+                        Free consult
+                    </div>
+                    <h1 class="copy-heading text-4xl md:text-6xl font-heading font-black tracking-tighter text-dark-navy leading-tight mb-5">
+                        無料相談<br>
+                        受付フォーム
+                    </h1>
+                    <p class="copy-body text-text-gray text-lg leading-relaxed font-medium mb-8">
+                        きおくポケットが合いそうか、まずは状況を軽く確認します。
+                        会社名、担当者名、メールアドレス、相談したいことを入力してください。
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div class="bg-white/90 border-2 border-border-light rounded-card p-5">
+                            <div class="text-2xl font-heading font-black text-bright-blue mb-1">1</div>
+                            <p class="text-sm font-bold text-dark-navy leading-relaxed">内容を送る</p>
+                        </div>
+                        <div class="bg-white/90 border-2 border-border-light rounded-card p-5">
+                            <div class="text-2xl font-heading font-black text-hot-pink mb-1">2</div>
+                            <p class="text-sm font-bold text-dark-navy leading-relaxed">状況を確認</p>
+                        </div>
+                        <div class="bg-white/90 border-2 border-border-light rounded-card p-5">
+                            <div class="text-2xl font-heading font-black text-accent-green mb-1">3</div>
+                            <p class="text-sm font-bold text-dark-navy leading-relaxed">試し方を相談</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="bg-white/95 backdrop-blur border-2 border-border-light rounded-card p-6 md:p-8 shadow-sm">
+                    <form id="consult-form" class="space-y-5">
+                        <div>
+                            <label for="company" class="block text-sm font-black text-dark-navy mb-2">会社名</label>
+                            <input id="company" name="company" type="text" autocomplete="organization" required class="w-full bg-bg-main border-2 border-border-light rounded-2xl px-4 py-3 font-bold text-dark-navy outline-none focus:border-bright-blue transition-colors" placeholder="例：〇〇株式会社">
+                        </div>
+
+                        <div>
+                            <label for="person" class="block text-sm font-black text-dark-navy mb-2">担当者のお名前</label>
+                            <input id="person" name="person" type="text" autocomplete="name" required class="w-full bg-bg-main border-2 border-border-light rounded-2xl px-4 py-3 font-bold text-dark-navy outline-none focus:border-bright-blue transition-colors" placeholder="例：鈴木 海人">
+                        </div>
+
+                        <div>
+                            <label for="contact" class="block text-sm font-black text-dark-navy mb-2">メールアドレス</label>
+                            <input id="contact" name="contact" type="email" inputmode="email" autocomplete="email" required class="w-full bg-bg-main border-2 border-border-light rounded-2xl px-4 py-3 font-bold text-dark-navy outline-none focus:border-bright-blue transition-colors" placeholder="例：info@example.com">
+                        </div>
+
+                        <div>
+                            <label for="topic" class="block text-sm font-black text-dark-navy mb-2">相談したいこと</label>
+                            <div class="relative">
+                                <select id="topic" name="topic" required class="w-full bg-bg-main border-2 border-border-light rounded-2xl px-4 py-3 pr-10 font-bold text-dark-navy outline-none focus:border-bright-blue transition-colors">
+                                    <option value="グループが多くて追いきれない">グループが多くて追いきれない</option>
+                                    <option value="案件ごとの話が混ざりやすい">案件ごとの話が混ざりやすい</option>
+                                    <option value="返事忘れや確認漏れがある">返事忘れや確認漏れがある</option>
+                                    <option value="過去の決定事項を探すのが大変">過去の決定事項を探すのが大変</option>
+                                    <option value="まずは使えるか相談したい">まずは使えるか相談したい</option>
+                                </select>
+                                <span class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-dark-navy font-black">⌄</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="detail" class="block text-sm font-black text-dark-navy mb-2">補足</label>
+                            <textarea id="detail" name="detail" rows="5" class="w-full bg-bg-main border-2 border-border-light rounded-2xl px-4 py-3 font-bold text-dark-navy outline-none focus:border-bright-blue transition-colors resize-none" placeholder="例：毎朝、未返信と締切だけまとめてほしいです。"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-dark-navy text-white px-8 py-4 rounded-pill font-bold text-lg hover:bg-bright-blue hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                            相談内容をまとめる
+                        </button>
+                    </form>
+
+                    <div id="consult-result" class="hidden mt-6 bg-bg-main border-2 border-bright-blue/20 rounded-card p-5">
+                        <div class="text-sm font-black text-bright-blue mb-2">送る内容</div>
+                        <pre id="consult-summary" class="whitespace-pre-wrap text-sm text-dark-navy font-bold leading-relaxed"></pre>
+                        <p id="consult-status" class="text-xs text-accent-green font-black mt-4"></p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const orphanTargets = document.querySelectorAll('h1, h2, h3, .font-heading.font-black');
+        const japaneseRun = /([ぁ-んァ-ヶ一-龯々ー]{3,})([、。！？!?」』）)]*)\s*$/;
+
+        orphanTargets.forEach((target) => {
+            const walker = document.createTreeWalker(target, NodeFilter.SHOW_TEXT, {
+                acceptNode(node) {
+                    if (!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+                    if (node.parentElement.closest('svg, script, style, .no-orphan')) return NodeFilter.FILTER_REJECT;
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            });
+
+            let lastJapaneseNode = null;
+            while (walker.nextNode()) {
+                if (japaneseRun.test(walker.currentNode.nodeValue)) {
+                    lastJapaneseNode = walker.currentNode;
+                }
+            }
+
+            if (!lastJapaneseNode) return;
+
+            const original = lastJapaneseNode.nodeValue;
+            const match = original.match(japaneseRun);
+            if (!match || match[1].length < 3) return;
+
+            const run = match[1];
+            const punctuation = match[2] || '';
+            const keep = run.slice(-2) + punctuation;
+            const before = original.slice(0, match.index) + run.slice(0, -2);
+            const after = original.slice(match.index + match[0].length);
+            const span = document.createElement('span');
+            span.className = 'no-orphan';
+            span.textContent = keep;
+            lastJapaneseNode.replaceWith(document.createTextNode(before), span, document.createTextNode(after));
+        });
+
+        const consultForm = document.getElementById('consult-form');
+        const consultResult = document.getElementById('consult-result');
+        const consultSummary = document.getElementById('consult-summary');
+        const consultStatus = document.getElementById('consult-status');
+
+        consultForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(consultForm);
+            const getValue = (key, fallback = '未入力') => {
+                const value = formData.get(key);
+                return value && value.toString().trim() ? value.toString().trim() : fallback;
+            };
+
+            const summary = [
+                'きおくポケットの無料相談をお願いします。',
+                '',
+                `会社名：${getValue('company')}`,
+                `担当者名：${getValue('person')}`,
+                `メールアドレス：${getValue('contact')}`,
+                `相談したいこと：${getValue('topic')}`,
+                '',
+                '補足：',
+                getValue('detail', '特になし')
+            ].join('\n');
+
+            consultSummary.textContent = summary;
+            consultResult.classList.remove('hidden');
+
+            try {
+                await navigator.clipboard.writeText(summary);
+                consultStatus.textContent = '相談内容をコピーしました。送信先にそのまま貼り付けられます。';
+            } catch (error) {
+                consultStatus.textContent = '相談内容を下にまとめました。コピーして使えます。';
+            }
+
+            consultResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    </script>
+</body>
+</html>
