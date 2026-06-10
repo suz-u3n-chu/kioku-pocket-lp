@@ -292,6 +292,13 @@
             border-color: #3474FF;
             box-shadow: 0 16px 32px rgba(52, 116, 255, 0.08);
         }
+
+        /* スマホ用微調整: 行末に数文字だけ残る改行を防ぐ */
+        @media (max-width: 767px) {
+            p, li, h3 {
+                text-wrap: pretty;
+            }
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-bright-blue selection:text-white bg-bg-main">
@@ -318,6 +325,7 @@
                 <a href="#features" class="text-dark-gray hover:text-bright-blue font-bold transition-colors">毎朝届くもの</a>
                 <a href="#how-it-works" class="text-dark-gray hover:text-bright-blue font-bold transition-colors">使い方</a>
                 <a href="#customize" class="text-dark-gray hover:text-bright-blue font-bold transition-colors">AI連携</a>
+                <a href="#price" class="text-dark-gray hover:text-bright-blue font-bold transition-colors">料金</a>
             </nav>
 
             <!-- CTA -->
@@ -342,7 +350,7 @@
             <h1 class="hero-title copy-heading text-[2.5rem] sm:text-6xl md:text-8xl font-heading font-black tracking-tighter text-dark-navy leading-[1.05] md:leading-[1.08] mb-6 reveal delay-100">
                 <span class="block">きおくポケット</span>
                 <span class="hero-subtitle text-bright-blue relative inline-block text-[0.5em] md:text-[0.45em] tracking-normal mt-3">
-                    LINEの大事な連絡を、朝まとめるAI秘書
+                    LINEの大事な連絡を、<br class="sm:hidden">朝まとめるAI秘書
                     <!-- 下線装飾 -->
                     <svg class="absolute w-full h-3 -bottom-1 left-0 text-hot-pink opacity-30" viewBox="0 0 100 10" preserveAspectRatio="none">
                         <path d="M0 5 Q 50 15 100 5" stroke="currentColor" stroke-width="4" fill="transparent"/>
@@ -400,7 +408,7 @@
             <div class="text-center mb-16 reveal">
                 <div class="inline-block bg-pale-pink text-hot-pink font-black px-4 py-1.5 rounded-pill mb-4 tracking-wider text-sm uppercase">For whom</div>
                 <h2 class="copy-heading text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
-                    LINEで仕事をしている人に向いています。
+                    LINEで仕事をしている人に<br class="md:hidden">向いています。
                 </h2>
                 <p class="copy-body text-text-gray text-lg max-w-3xl mx-auto leading-relaxed">
                     たとえば、こんなことはありませんか？<br>
@@ -478,7 +486,7 @@
                         🕒
                     </div>
                     <h3 class="text-xl font-heading font-black text-dark-navy mb-3">過去の決定事項を探すのが大変</h3>
-                    <p class="text-text-gray text-sm leading-relaxed">
+                    <p class="text-text-gray text-sm leading-relaxed md:[text-wrap:balance]">
                         仕様、日程、金額、担当者。あとから確認したい時に、長いトーク履歴を探すことになります。
                     </p>
                 </div>
@@ -505,7 +513,7 @@
             <div class="text-center mb-16 reveal">
                 <div class="inline-block bg-pale-blue text-bright-blue font-black px-4 py-1.5 rounded-pill mb-4 tracking-wider text-sm uppercase">What it does</div>
                 <h2 class="copy-heading text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
-                    AIが、LINEの中から大事なことを拾います。
+                    AIが、LINEの中から<br class="md:hidden">大事なことを拾います。
                 </h2>
                 <p class="copy-body text-text-gray text-lg max-w-2xl mx-auto">
                     きおくポケットは、LINEの会話を読んで、<br>
@@ -789,7 +797,7 @@
             <div class="text-center mb-16 reveal">
                 <div class="inline-block bg-white text-hot-pink font-black px-4 py-1.5 rounded-pill shadow-sm mb-4 tracking-wider text-sm uppercase">Difference</div>
                 <h2 class="copy-heading text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-6 leading-tight">
-                    ただ短くまとめるだけではありません。
+                    ただ短くまとめるだけでは<br class="md:hidden">ありません。
                 </h2>
                 <p class="copy-body text-text-gray text-base md:text-lg max-w-3xl mx-auto font-medium">
                     普通のAI要約は、会話を短くまとめるもの。<br class="hidden md:block">
@@ -801,7 +809,7 @@
                 <div class="bg-white border-2 border-border-light rounded-card p-8 hover-card reveal">
                     <div class="text-3xl mb-4">🚀</div>
                     <h3 class="text-xl font-heading font-black text-dark-navy mb-3">普通のAI要約</h3>
-                    <p class="text-text-gray text-sm leading-relaxed">
+                    <p class="text-text-gray text-sm leading-relaxed md:[text-wrap:balance]">
                         その場の会話を短くまとめます。別のLINEグループの話とはつながりにくいことがあります。
                     </p>
                 </div>
@@ -809,7 +817,7 @@
                 <div class="bg-white border-2 border-border-light rounded-card p-8 hover-card reveal delay-100">
                     <div class="text-3xl mb-4">📦</div>
                     <h3 class="text-xl font-heading font-black text-dark-navy mb-3">きおくポケット</h3>
-                    <p class="text-text-gray text-sm leading-relaxed">
+                    <p class="text-text-gray text-sm leading-relaxed md:[text-wrap:balance]">
                         別々のLINEグループで話していても、同じ案件の話ならひとつにまとめて見られるようにします。
                     </p>
                 </div>
@@ -817,7 +825,7 @@
                 <div class="bg-white border-2 border-border-light rounded-card p-8 hover-card reveal delay-200">
                     <div class="text-3xl mb-4">✨</div>
                     <h3 class="text-xl font-heading font-black text-dark-navy mb-3">案件の今が分かる</h3>
-                    <p class="text-text-gray text-sm leading-relaxed">
+                    <p class="text-text-gray text-sm leading-relaxed md:[text-wrap:balance]">
                         決まったこと、未返信、締切、確認待ちなどを、案件の状況として見返しやすくします。
                     </p>
                 </div>
@@ -830,8 +838,8 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16 reveal">
                 <div class="inline-block bg-pale-blue text-bright-blue font-black px-4 py-1.5 rounded-pill mb-4 tracking-wider text-sm uppercase">Follow up</div>
-                <h2 class="copy-heading text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
-                    「また今度お願いしたい」も、忘れません。
+                <h2 class="copy-heading text-[1.6rem] md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
+                    「また今度お願いしたい」<br class="md:hidden">も、忘れません。
                 </h2>
                 <p class="copy-body text-text-gray text-lg max-w-2xl mx-auto">
                     LINEの中には、仕事につながる言葉がよくあります。<br>
@@ -857,7 +865,7 @@
                     <div class="absolute -top-4 left-6 bg-bright-blue text-white font-black text-xs px-3 py-1 rounded-full uppercase">きおくポケット</div>
                     <div class="flex items-center gap-3 mb-6">
                         <div class="w-10 h-10 bg-pale-blue rounded-full flex items-center justify-center text-xl">📦</div>
-                        <h3 class="text-xl font-heading font-black text-bright-blue">あとで思い出しやすくする</h3>
+                        <h3 class="text-lg md:text-xl font-heading font-black text-bright-blue">あとで思い出しやすくする</h3>
                     </div>
                     <ul class="space-y-3 text-sm text-dark-navy font-bold">
                         <li>あとで連絡したほうがよさそうな相手を見つける</li>
@@ -961,10 +969,10 @@
                         <h2 class="copy-heading text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-5">
                             実は、いつものAIともつながります。
                         </h2>
-                        <p class="copy-body text-text-gray text-base md:text-lg leading-relaxed font-medium mb-5">
+                        <p class="copy-body text-text-gray text-base md:text-lg leading-relaxed font-medium mb-5 md:[text-wrap:balance]">
                             きおくポケットにたまった内容は、必要に応じて、普段お使いのChatGPTやClaudeなどからも確認できる形にできます。
                         </p>
-                        <p class="copy-body text-dark-gray text-sm md:text-base leading-relaxed font-bold">
+                        <p class="copy-body text-dark-gray text-sm md:text-base leading-relaxed font-bold md:[text-wrap:pretty]">
                             LINEの内容を毎回コピーして貼らなくても、「この案件って今どんな感じだっけ？」と聞けば、AIが案件の流れを分かった状態で答えてくれます。
                         </p>
                     </div>
@@ -992,7 +1000,7 @@
                 </div>
 
                 <div class="mt-8 pt-8 border-t border-border-light">
-                    <h3 class="text-xl font-heading font-black text-dark-navy mb-4">こんなカスタマイズもできます</h3>
+                    <h3 class="text-lg md:text-xl font-heading font-black text-dark-navy mb-4">こんなカスタマイズもできます</h3>
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
                         <div class="bg-pale-blue p-4 rounded-xl text-sm font-bold text-dark-navy">案件状況をAIに聞ける</div>
                         <div class="bg-pale-green p-4 rounded-xl text-sm font-bold text-dark-navy">返信文を考えてもらう</div>
@@ -1002,6 +1010,62 @@
                     <p class="copy-body text-xs md:text-sm text-text-gray font-bold leading-relaxed mt-5">
                         まずはLINEの整理から。慣れてきたら、普段使っているAIとつなぐ形にも広げられます。
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 料金セクション -->
+    <section id="price" class="py-24 bg-[#F7FCFF] relative overflow-hidden">
+        <div class="blob delay-1 w-44 h-44 bg-accent-green -top-10 -left-10 opacity-10"></div>
+        <div class="blob delay-2 w-56 h-56 bg-bright-blue bottom-0 right-0 opacity-10"></div>
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-14 reveal">
+                <div class="inline-block bg-white text-bright-blue font-black px-4 py-1.5 rounded-pill shadow-sm mb-4 tracking-wider text-sm uppercase">Price</div>
+                <h2 class="copy-heading text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
+                    まずは、<br class="md:hidden">よく使うLINEから。
+                </h2>
+                <p class="copy-body text-text-gray text-lg max-w-2xl mx-auto font-bold">
+                    きおくポケットは、ライトな範囲に絞って一律料金で始められます。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-8 items-stretch reveal">
+                <div class="bg-white border-2 border-bright-blue rounded-card p-8 md:p-10 shadow-md shadow-bright-blue/10 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-accent-green text-white text-xs font-black px-4 py-2 rounded-bl-card">LIGHT</div>
+                    <div class="inline-flex items-center gap-2 bg-pale-blue text-bright-blue px-4 py-1.5 rounded-pill font-black text-sm mb-7">
+                        <span class="w-2.5 h-2.5 bg-bright-blue rounded-full"></span>
+                        一律料金
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-8">
+                        <div class="bg-pale-blue/50 rounded-2xl p-5 border border-bright-blue/10">
+                            <div class="text-xs font-black text-bright-blue mb-2 tracking-wider">初期費用</div>
+                            <div class="font-heading font-black text-4xl md:text-5xl text-dark-navy leading-none">15万円</div>
+                        </div>
+                        <div class="bg-pale-green rounded-2xl p-5 border border-accent-green/10">
+                            <div class="text-xs font-black text-accent-green mb-2 tracking-wider">月額</div>
+                            <div class="font-heading font-black text-4xl md:text-5xl text-dark-navy leading-none">5万円</div>
+                        </div>
+                    </div>
+                    <p class="copy-body text-dark-gray text-base md:text-lg font-bold leading-relaxed md:[text-wrap:balance]">
+                        1〜3グループから、朝刊ブリーフィングと対応漏れチェックを始めるプランです。
+                    </p>
+                </div>
+
+                <div class="bg-dark-navy text-white rounded-card p-8 md:p-10 relative overflow-hidden">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-bright-blue/30 rounded-full"></div>
+                    <h3 class="text-2xl font-heading font-black mb-5">料金に含まれること</h3>
+                    <ul class="space-y-4 text-sm md:text-base font-bold relative z-10">
+                        <li class="flex gap-3"><span class="text-accent-green">✓</span><span>1〜3個の業務LINEグループを整理</span></li>
+                        <li class="flex gap-3"><span class="text-accent-green">✓</span><span>毎朝の朝刊ブリーフィング</span></li>
+                        <li class="flex gap-3"><span class="text-accent-green">✓</span><span>返事・確認事項・忘れそうな相談の抽出</span></li>
+                        <li class="flex gap-3"><span class="text-accent-green">✓</span><span>基本の要約ルール設定</span></li>
+                    </ul>
+                    <div class="mt-8 pt-6 border-t border-white/15">
+                        <p class="copy-body text-white/80 text-sm font-bold leading-relaxed">
+                            LINE以外の業務改善や個別カスタマイズまで毎月進めたい場合は、月額20万円のAI保守・伴走プラン内で対応します。
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1024,13 +1088,13 @@
         </div>
 
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10 reveal">
-            <h2 class="copy-heading text-4xl md:text-6xl font-heading font-black tracking-tighter text-dark-navy mb-6 leading-tight">
+            <h2 class="copy-heading text-4xl md:text-[clamp(2.75rem,4.2vw,3.25rem)] font-heading font-black tracking-tighter text-dark-navy mb-6 leading-tight">
                 未読を読む時間を、<br>
-                <span class="text-bright-blue">仕事を進める時間に変えましょう。</span>
+                <span class="text-bright-blue md:whitespace-nowrap">仕事を進める時間に<br class="md:hidden">変えましょう。</span>
             </h2>
-            <p class="copy-body text-xl text-text-gray mb-10 font-bold">
+            <p class="copy-body text-xl text-text-gray mb-10 font-bold [text-wrap:balance]">
                 きおくポケットは、LINEを便利にするだけのサービスではありません。<br>
-                大事な連絡を見落とさず、返事忘れを減らし、次の仕事のチャンスも拾いやすくするためのAI秘書です。<br>
+                大事な連絡を見落とさず、返事忘れを減らし、<br class="hidden md:block">次の仕事のチャンスも拾いやすくするためのAI秘書です。<br>
                 まずは、よく使うLINEグループ1つから試せます。
             </p>
             <a href="./consult.html" target="_blank" rel="noopener" class="inline-block bg-dark-navy text-white px-10 py-5 rounded-pill font-bold text-xl hover:bg-bright-blue hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
