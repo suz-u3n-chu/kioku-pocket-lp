@@ -293,6 +293,257 @@
             box-shadow: 0 16px 32px rgba(52, 116, 255, 0.08);
         }
 
+        .line-flow-grid {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.25rem;
+            align-items: stretch;
+        }
+
+        .line-flow-arrows {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            pointer-events: none;
+            overflow: visible;
+        }
+
+        .line-flow-phone {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-height: 31rem;
+            background: #EAF6FF;
+            border: 5px solid #0C1937;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 18px 36px rgba(12, 25, 55, 0.12);
+            z-index: 1;
+        }
+
+        .line-flow-phone::before {
+            content: "";
+            position: absolute;
+            top: 0.55rem;
+            left: 50%;
+            width: 5.2rem;
+            height: 0.45rem;
+            background: #0C1937;
+            border-radius: 999px;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+
+        .line-flow-header {
+            background: linear-gradient(135deg, #00B850, #079A49);
+            color: white;
+            padding: 1.65rem 1rem 0.9rem;
+            font-weight: 900;
+            text-align: center;
+            letter-spacing: 0;
+        }
+
+        .line-flow-screen {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            padding: 1rem 0.85rem;
+        }
+
+        .line-flow-date {
+            align-self: center;
+            background: rgba(12, 25, 55, 0.2);
+            color: white;
+            border-radius: 999px;
+            padding: 0.25rem 0.8rem;
+            font-size: 0.7rem;
+            font-weight: 900;
+        }
+
+        .line-message {
+            display: grid;
+            grid-template-columns: 2.3rem minmax(0, 1fr);
+            gap: 0.55rem;
+            align-items: start;
+        }
+
+        .line-avatar {
+            width: 2.3rem;
+            height: 2.3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 2px solid rgba(12, 25, 55, 0.08);
+            font-size: 1.15rem;
+            flex: 0 0 auto;
+        }
+
+        .line-bubble {
+            background: white;
+            border-radius: 6px 18px 18px 18px;
+            padding: 0.8rem 0.9rem;
+            font-size: 0.9rem;
+            line-height: 1.65;
+            font-weight: 900;
+            color: #0C1937;
+            box-shadow: 0 4px 14px rgba(12, 25, 55, 0.08);
+            overflow-wrap: anywhere;
+        }
+
+        .line-time {
+            color: #6D6D6D;
+            font-size: 0.65rem;
+            font-weight: 900;
+            text-align: right;
+            margin-top: 0.25rem;
+        }
+
+        .line-flow-input {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            background: rgba(255, 255, 255, 0.85);
+            border-top: 1px solid rgba(12, 25, 55, 0.08);
+            padding: 0.65rem 0.75rem;
+            color: #8A8A8A;
+            font-size: 0.75rem;
+            font-weight: 900;
+        }
+
+        .line-flow-input span:nth-child(2) {
+            flex: 1;
+            background: white;
+            border: 1px solid rgba(12, 25, 55, 0.08);
+            border-radius: 999px;
+            padding: 0.35rem 0.8rem;
+        }
+
+        .summary-card {
+            background: white;
+            border-radius: 18px;
+            padding: 1rem;
+            color: #0C1937;
+            box-shadow: 0 8px 22px rgba(12, 25, 55, 0.1);
+        }
+
+        .summary-card-title {
+            font-size: 0.95rem;
+            font-weight: 900;
+            margin-bottom: 0.7rem;
+            padding-bottom: 0.65rem;
+            border-bottom: 1px dashed rgba(12, 25, 55, 0.18);
+        }
+
+        .summary-group {
+            margin-top: 0.7rem;
+            font-size: 0.76rem;
+            line-height: 1.75;
+            font-weight: 900;
+        }
+
+        .summary-group strong {
+            color: #00A349;
+            display: block;
+            margin-bottom: 0.15rem;
+        }
+
+        .line-flow-arrow {
+            position: absolute;
+            top: 50%;
+            width: 0;
+            height: 2rem;
+            border-right: 5px dotted #00B850;
+            opacity: 0.9;
+            z-index: 2;
+            display: none;
+        }
+
+        .line-flow-arrow::after {
+            content: "";
+            position: absolute;
+            right: -0.55rem;
+            bottom: -0.85rem;
+            width: 0;
+            height: 0;
+            border-left: 0.75rem solid #00B850;
+            border-top: 0.55rem solid transparent;
+            border-bottom: 0.55rem solid transparent;
+            transform: rotate(90deg);
+        }
+
+        .line-flow-bot {
+            position: absolute;
+            left: 50%;
+            bottom: -1.2rem;
+            transform: translateX(-50%);
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            background: white;
+            border: 2px solid rgba(0, 184, 80, 0.18);
+            border-radius: 999px;
+            padding: 0.6rem 1rem;
+            box-shadow: 0 16px 34px rgba(12, 25, 55, 0.12);
+            color: #0C1937;
+            font-size: 0.8rem;
+            font-weight: 900;
+            white-space: nowrap;
+        }
+
+        .line-flow-bot-face {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: #0C1937;
+            color: #65F2A3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 1023px) {
+            .line-flow-arrows {
+                display: none;
+            }
+
+            .line-flow-grid {
+                grid-template-columns: 1fr;
+                width: 100%;
+                max-width: min(28rem, calc(100vw - 3rem));
+                margin-inline: auto;
+                gap: 3.2rem;
+            }
+
+            .line-flow-phone {
+                min-height: auto;
+                width: 100%;
+            }
+
+            .line-flow-arrow {
+                left: 50% !important;
+                top: auto;
+                bottom: -2.65rem;
+                transform: translateX(-50%) !important;
+                display: block;
+            }
+
+            .line-flow-bot {
+                position: static;
+                transform: none;
+                justify-content: center;
+                margin: -2rem auto 0;
+                width: fit-content;
+            }
+        }
+
         /* スマホ用微調整: 行末に数文字だけ残る改行を防ぐ */
         @media (max-width: 767px) {
             p, li, h3 {
@@ -597,6 +848,160 @@
     <!-- 機能セクション (Features) -->
     <section id="features" class="py-24 bg-bg-main relative overflow-hidden">
         <div class="max-w-6xl mx-auto px-6">
+            <div class="mb-28 reveal">
+                <div class="text-center mb-12">
+                    <div class="inline-flex flex-wrap justify-center gap-3 mb-5">
+                        <span class="bg-white border border-accent-green/20 text-accent-green px-4 py-2 rounded-pill text-xs md:text-sm font-black">情報の見落としを減らす</span>
+                        <span class="bg-white border border-accent-green/20 text-accent-green px-4 py-2 rounded-pill text-xs md:text-sm font-black">状況をすばやく把握</span>
+                        <span class="bg-white border border-accent-green/20 text-accent-green px-4 py-2 rounded-pill text-xs md:text-sm font-black">今日やることがわかる</span>
+                    </div>
+                    <h2 class="copy-heading text-3xl md:text-5xl font-heading font-black tracking-tighter text-dark-navy mb-4">
+                        複数のLINEを、<br class="md:hidden">朝の1通にまとめます。
+                    </h2>
+                    <p class="copy-body text-text-gray text-base md:text-lg max-w-3xl mx-auto font-bold leading-relaxed">
+                        施主グループ、施工グループ、社内グループ。<br class="hidden md:block">
+                        別々のトークに流れた大事な連絡を、きおくポケットが朝のまとめに整理します。
+                    </p>
+                </div>
+
+                <div class="line-flow-grid">
+                    <svg class="line-flow-arrows hidden lg:block" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                        <defs>
+                            <marker id="line-flow-arrowhead" markerWidth="4" markerHeight="4" refX="3.6" refY="2" orient="auto">
+                                <path d="M0,0 L4,2 L0,4 Z" fill="#00B850"></path>
+                            </marker>
+                        </defs>
+                        <path d="M 28 72 C 42 86, 57 77, 68 64" fill="none" stroke="#00B850" stroke-width="0.95" stroke-linecap="round" stroke-dasharray="1 1.8" marker-end="url(#line-flow-arrowhead)"></path>
+                        <path d="M 58 66 C 62 68, 65 66, 68 62" fill="none" stroke="#00B850" stroke-width="0.95" stroke-linecap="round" stroke-dasharray="1 1.8" marker-end="url(#line-flow-arrowhead)"></path>
+                    </svg>
+
+                    <article class="line-flow-phone">
+                        <div class="line-flow-header">施主グループ</div>
+                        <div class="line-flow-screen">
+                            <div class="line-flow-date">今日</div>
+                            <div class="line-message">
+                                <div class="line-avatar">👨</div>
+                                <div>
+                                    <div class="line-bubble">キッチンの色、やっぱり白系でお願いします</div>
+                                    <div class="line-time">10:15</div>
+                                </div>
+                            </div>
+                            <div class="line-message">
+                                <div class="line-avatar">👩</div>
+                                <div>
+                                    <div class="line-bubble">引き渡しは来月で大丈夫ですか？</div>
+                                    <div class="line-time">10:18</div>
+                                </div>
+                            </div>
+                            <div class="line-message">
+                                <div class="line-avatar">🏠</div>
+                                <div>
+                                    <div class="line-bubble">見積もりも今日中に確認します</div>
+                                    <div class="line-time">10:22</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line-flow-input">
+                            <span>＋</span>
+                            <span>Aa</span>
+                            <span>🎤</span>
+                        </div>
+                    </article>
+
+                    <div class="line-flow-arrow left" aria-hidden="true"></div>
+
+                    <article class="line-flow-phone">
+                        <div class="line-flow-header">施工グループ</div>
+                        <div class="line-flow-screen">
+                            <div class="line-flow-date">今日</div>
+                            <div class="line-message">
+                                <div class="line-avatar">👷</div>
+                                <div>
+                                    <div class="line-bubble">明日、配筋検査に入ります</div>
+                                    <div class="line-time">11:02</div>
+                                </div>
+                            </div>
+                            <div class="line-message">
+                                <div class="line-avatar">🔧</div>
+                                <div>
+                                    <div class="line-bubble">建具の納期が1週間遅れそうです</div>
+                                    <div class="line-time">11:15</div>
+                                </div>
+                            </div>
+                            <div class="line-message">
+                                <div class="line-avatar">📋</div>
+                                <div>
+                                    <div class="line-bubble">先に共有だけお願いします</div>
+                                    <div class="line-time">11:17</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line-flow-input">
+                            <span>＋</span>
+                            <span>Aa</span>
+                            <span>🎤</span>
+                        </div>
+                    </article>
+
+                    <div class="line-flow-arrow middle" aria-hidden="true"></div>
+
+                    <article class="line-flow-phone">
+                        <div class="line-flow-header">きおくポケット</div>
+                        <div class="line-flow-screen">
+                            <div class="line-message">
+                                <div class="line-avatar">🤖</div>
+                                <div class="summary-card">
+                                    <div class="summary-card-title">本日のまとめ</div>
+                                    <div class="summary-group">
+                                        <strong>【施主】</strong>
+                                        ・キッチン色は白系で確定<br>
+                                        ・引き渡し時期の確認あり<br>
+                                        ・見積もり確認待ち
+                                    </div>
+                                    <div class="summary-group">
+                                        <strong>【施工】</strong>
+                                        ・明日、配筋検査<br>
+                                        ・建具納期が1週間遅れの可能性
+                                    </div>
+                                    <div class="summary-group">
+                                        <strong>【今日やること】</strong>
+                                        ・引き渡し日の返事をする<br>
+                                        ・建具遅延を先に共有する
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line-flow-input">
+                            <span>＋</span>
+                            <span>朝のまとめを受信</span>
+                            <span>✓</span>
+                        </div>
+                    </article>
+
+                    <div class="line-flow-bot">
+                        <div class="line-flow-bot-face">●●</div>
+                        <span>左の2つのLINEから、大事なことだけ右に届きます</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-14">
+                    <div class="bg-white border-2 border-border-light rounded-card p-5">
+                        <div class="text-accent-green font-heading font-black text-2xl mb-2">1</div>
+                        <h3 class="font-heading font-black text-dark-navy mb-2">会話を集める</h3>
+                        <p class="copy-body text-sm text-text-gray font-bold leading-relaxed">いつものLINEグループで話した内容を見ます。</p>
+                    </div>
+                    <div class="bg-white border-2 border-border-light rounded-card p-5">
+                        <div class="text-accent-green font-heading font-black text-2xl mb-2">2</div>
+                        <h3 class="font-heading font-black text-dark-navy mb-2">AIが整理する</h3>
+                        <p class="copy-body text-sm text-text-gray font-bold leading-relaxed">返事、締切、確認待ちを仕事の状況としてまとめます。</p>
+                    </div>
+                    <div class="bg-white border-2 border-bright-blue rounded-card p-5 shadow-sm shadow-bright-blue/10">
+                        <div class="text-bright-blue font-heading font-black text-2xl mb-2">3</div>
+                        <h3 class="font-heading font-black text-dark-navy mb-2">朝に届く</h3>
+                        <p class="copy-body text-sm text-text-gray font-bold leading-relaxed">全部読む前に、今日見るべきことだけ確認できます。</p>
+                    </div>
+                </div>
+            </div>
             
             <div class="text-center mb-20 reveal">
                 <div class="inline-block bg-pale-blue text-bright-blue font-black px-4 py-1.5 rounded-pill mb-4 tracking-wider text-sm uppercase">Morning brief</div>
